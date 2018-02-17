@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SoundTrack</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+	<body onload="playSavedSoundscape()">
+		<div class="container">
+			<center>
+				<div class="row mt-5">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4"><h1>SoundTrack</h1></div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-1"><a href="alertsettings" class="black"><i class="fas fa-cogs fa-2x"></i><p>Settings</p></a></div>
+					<div class="col-sm-1"><i class="fas fa-info-circle fa-2x" onclick="helpListen()" onmouseover="" style="cursor: pointer;"></i><p onclick="helpListen()" onmouseover="" style="cursor: pointer;">Help</p></div>
+				</div>
+
+
+				<div id="productivityTracker" class="row mt-4">
+					<h4 class="col-12">Productivity Tracker</h4>
+					<div class="productivity col-6"><b>Productive for: </b><span id="productiveTime">00:00</span></div>
+					<div class="offtask col-6"><b>Downtime left: </b><span id="timer"></span></div>
+				</div>
+
+				<br><br>
+				<h4>Soundscape</h4>
+
+				<div class="soundscroll squares" id="scroll1">
+					{{#each soundscapes}} 
+					<button class="btn btn-outline-secondary scape" onclick="soundEffect({{soundEffectnum}})" id="{{id}}">{{name}}</button>
+					{{/each}}
+				</div>
+
+				<br><br>
+				<a href="home" class="btn btn-outline-primary" role="button" aria-pressed="true">I'm all done!</a>
+
+			</div>
+
+
+		</center>
+	</div>
+
+	<footer>
+		<div class="row">
+			<div class="col-sm-12">
+				© 2018 Copyright: Soundsters
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/script.js"></script>
+</body>
+</html>
