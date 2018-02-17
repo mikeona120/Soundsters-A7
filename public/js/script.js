@@ -153,11 +153,11 @@ function startPTimer() {
   // Saves the productive time
   // TODO: fix so value is gotten from storage before the first time it is saved 
   if(s > 1){
-	sessionStorage.setItem("pTimeVal", m);
-	sessionStorage.setItem("pTimeValSecs", s);
-}
-printTime(m, s, 'productiveTime'); 
-pTimerCountdown = setTimeout(startPTimer, 1000);
+   sessionStorage.setItem("pTimeVal", m);
+   sessionStorage.setItem("pTimeValSecs", s);
+ }
+ printTime(m, s, 'productiveTime'); 
+ pTimerCountdown = setTimeout(startPTimer, 1000);
 }
 
 
@@ -169,6 +169,9 @@ function updateTimeRange(val) {
   document.getElementById("downtime").innerHTML = val;
   sessionStorage.setItem("downtimeVal", val);
   sessionStorage.setItem("downtimeValSecs", "00");
+  if (($('.scape').hasClass('active')) && ($('.alarm').hasClass('active'))) {
+    $('.float').removeClass('disabled');
+  }
 }
 
 if(timer != null){
@@ -279,8 +282,8 @@ function checkTimeDigit(time) {
     }
 
     $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+      $('[data-toggle="tooltip"]').tooltip()
+    })
 
     //------- SOUNDS -----------//
 
@@ -429,6 +432,7 @@ $(function(){
   });
 })
 
+// show if buttons are selected
 $('.scape').click( function() {
   $('.scape').removeClass( "active" );
   $( this ).addClass( "active" );
