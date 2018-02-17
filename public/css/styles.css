@@ -10,6 +10,27 @@ h4 {
   color: black;
 }
 
+.float{
+  position:fixed;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width:50%;
+  bottom:30px;
+  right:25%;
+  background-color:#fff;
+  color:#0000ff;
+  /*border-radius:50px;*/
+  text-align:center;
+
+}
+
+.flex-container {
+  display:flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal center alignment */
+
+}
+
 .jumbotron {
   padding: 2%;
 }
@@ -28,11 +49,6 @@ h4 {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 130%;
-}
-
-.downtime-text {
-  font-weight: bold;
-
 }
 
 #volume:before {
