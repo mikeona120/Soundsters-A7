@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var login = require('./routes/login');
 var screen2 = require('./routes/screen2');
 var alertsettings = require('./routes/alertsettings');
+var profile = require('./routes/profile');
 // Example route
 // var user = require('./routes/user');
 
@@ -40,7 +41,8 @@ if ('development' == app.get('env')) {
 app.get('/home', index.view);
 app.get('/', login.view);
 app.get('/screen2', screen2.view);
-app.get('/alertsettings',alertsettings.view);
+app.get('/alertsettings', alertsettings.view);
+app.get('/profile', profile.view);
 // Example route
 // app.get('/users', user.list);
 
