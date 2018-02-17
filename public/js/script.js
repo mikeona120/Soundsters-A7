@@ -278,6 +278,10 @@ function checkTimeDigit(time) {
         "as you want!");
     }
 
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
     //------- SOUNDS -----------//
 
     //first page sound javascript

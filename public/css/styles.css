@@ -26,9 +26,8 @@ h4 {
 
 .flex-container {
   display:flex;
-    align-items: center; /* Vertical center alignment */
-    justify-content: center; /* Horizontal center alignment */
-
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
 }
 
 .jumbotron {
@@ -36,7 +35,7 @@ h4 {
 }
 
 .productivity {
-  background-color: #FFF9C4; 
+  background-color: #B2DFDB; 
   float:left;
   padding-top: 5%;
   padding-bottom: 5%;
