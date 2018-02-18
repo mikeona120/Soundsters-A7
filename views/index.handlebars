@@ -26,7 +26,7 @@
 				</div>
 
 				<br><br>
-				<h4>Soundscape</h4>
+				<h4 data-toggle="tooltip" title="Get your head in the game! Choose a relaxing sound for your work session.">Soundscape</h4>
 
 				<div class="soundscroll squares" id="scroll1">
 					{{#each soundscapes}} 
@@ -35,7 +35,7 @@
 				</div>
 
 				<br><br>
-				<h4>Alert Sound</h4>
+				<h4 data-toggle="tooltip" title="The sound that will play whenever you're off-task for too long">Alert Sound</h4>
 				<div class="soundscroll squares" id="scroll2">
 					{{#each alerts}} 
 					<button class="btn btn-outline-secondary alarm" onclick="soundEffect({{soundEffectnum}})" id="{{id}}">{{name}}</button>
@@ -47,7 +47,7 @@
 
 				<br><br>
 
-				<h4 class="downtime-text">Total Break Time: <span id="downtime">20</span> minutes</h4>
+				<h4 class="downtime-text" data-toggle="tooltip" title="The amount of time you allow yourself for goofing off for this work session">Total Break Time: <span id="downtime">20</span> minutes</h4>
 				<br>
 				<!-- <p class="pt-0">This is your quota of unproductivity for this session.</p> -->
 				<div class="slidecontainer">

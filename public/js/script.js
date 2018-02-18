@@ -173,14 +173,14 @@ function checkTimeDigit(time) {
         "as you want!");
     }
 
-       function helpProfile() {
+    function helpProfile() {
       alert("Profile Help Here");
     }
 
 // enable tooltips later for index
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
     //------- SOUNDS -----------//
 
