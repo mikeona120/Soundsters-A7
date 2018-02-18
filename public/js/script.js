@@ -38,6 +38,12 @@ if(pTime != null){
 	startPTimer();
 }
 
+
+function resetPTimer() {
+  sessionStorage.setItem("pTimeVal", 0);
+  sessionStorage.setItem("pTimeValSecs", 0);
+}
+
 // should we track total productivity? total downtime?
 function startPTimer() {
   var presentTime = document.getElementById('productiveTime').innerHTML;
@@ -60,7 +66,6 @@ function startPTimer() {
  pTimerCountdown = setTimeout(startPTimer, 1000);
 }
 
-
 // countdown timer
 var timer = document.getElementById('timer');
 
@@ -71,7 +76,7 @@ function updateTimeRange(val) {
   sessionStorage.setItem("downtimeValSecs", "00");
 }
 
-// links downtime slider to downtime timer
+// alert time slider
 function updateAlertTime(val) {
   document.getElementById("alerttime").innerHTML = val;
   sessionStorage.setItem("alerttimeVal", val);
@@ -105,6 +110,9 @@ function checkTimeDigit(time) {
     //------- CHECK ACTIVE/INACTIVE -------//
 
     var isActive;
+    sessionStorage.setItem("overallDowntimeHour", 0);
+    sessionStorage.setItem("overallDowntimeMin", 0);
+    sessionStorage.setItem("overallDowntimeSec", 0);
     // set isActive status
     window.onfocus = function () { 
       isActive = true; 
@@ -119,7 +127,6 @@ function checkTimeDigit(time) {
     // implement start of timer when user is inactive
     if ( isActive == false ) {
       start = Date.now();
-      //alert("Productivity paused");
       clearTimeout(pTimerCountdown);
       startTimer();
       checkEnd = setInterval(onPage, 1000);
@@ -136,6 +143,10 @@ function checkTimeDigit(time) {
     elapsed = (end - start) / 1000; // number of seconds away from tab
     elapsedMinutes = Math.floor(elapsed / 60);
     elapsedSeconds = Math.floor(elapsed % 60);
+    // sessionStorage.setItem("overallDowntimeMin", parseInt(sessionStorage.getItem("overallDowntimeMin")) + elapsedMinutes);
+    // sessionStorage.setItem("overallDowntimeSec", parseInt(sessionStorage.getItem("overallDowntimeSec")) + elapsedSeconds);
+    // alert(sessionStorage.getItem("overallDowntimeSec"));
+    // document.getElementById('totalBreakTime').innerHTML = sessionStorage.getItem("overallDowntimeSec");
     // alert("Welcome back! You spent " + elapsedMinutes + " minutes and " + elapsedSeconds + " seconds off-task!");
 
     // update timers
@@ -164,6 +175,7 @@ function checkTimeDigit(time) {
   if(timer != null){
    checkPage = setInterval(offPage, 1000); 
  }
+
 
 
     //---------------------------- HELP POP-UPS ----------------------------//
