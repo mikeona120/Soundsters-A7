@@ -1,3 +1,11 @@
+// function resetSlider() {
+//     var slider = document.getElementById('downtimeRange');
+//     if (slider != null) {
+//         slider.value = 20; 
+//     }
+// }
+// resetSlider();
+
 function startTimer() { // Jackie's countdown
 var presentTime = document.getElementById('timer').innerHTML;
 var timeArray = presentTime.split(/[:]+/);
@@ -154,7 +162,7 @@ function checkTimeDigit(time) {
  }
 
 
-    //------- HELP POP-UPS -------//
+    //---------------------------- HELP POP-UPS ----------------------------//
     function helpStart() {
       alert("Every time you go off-task, SoundTrack will alert you at decreasing" +
         " intervals to help you stay productive and focused. To get started, simply" +
@@ -182,7 +190,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-    //------- SOUNDS -----------//
+    //---------------------------- SOUNDS -----------------------------------//
 
     //first page sound javascript
     //soundscape
@@ -218,7 +226,8 @@ $(function () {
     function soundEffect(num)
     {
       // if audio is playing, pause it first
-      if (!fallingRain.paused || !forestMorning.paused || !burningLogs.paused || !whiteNoise.paused || !foghorn.paused || !beeping.paused || !siren.paused || !bells.paused) {
+      if (!fallingRain.paused || !forestMorning.paused || !burningLogs.paused || !whiteNoise.paused || 
+        !foghorn.paused || !beeping.paused || !siren.paused || !bells.paused) {
         fallingRain.pause();
         forestMorning.pause();
         burningLogs.pause();
