@@ -1,10 +1,10 @@
-// function resetSlider() {
-//     var slider = document.getElementById('downtimeRange');
-//     if (slider != null) {
-//         slider.value = 20; 
-//     }
-// }
-// resetSlider();
+function resetSlider() {
+  var slider = document.getElementById('downtimeRange');
+  if (slider != null) {
+    sessionStorage.setItem("downtimeVal", 20);
+    sessionStorage.setItem("downtimeValSecs", "00");
+  }
+}
 
 function startTimer() { // Jackie's countdown
 var presentTime = document.getElementById('timer').innerHTML;
@@ -76,9 +76,6 @@ function updateAlertTime(val) {
   document.getElementById("alerttime").innerHTML = val;
   sessionStorage.setItem("alerttimeVal", val);
   sessionStorage.setItem("alerttimeValSecs", "00");
-  if (($('.scape').hasClass('active')) && ($('.alarm').hasClass('active'))) {
-    $('.float').removeClass('disabled');
-  }
 }
 
 if(timer != null){
@@ -236,15 +233,15 @@ $(function () {
       if (!fallingRain.paused || !forestMorning.paused || !burningLogs.paused || !whiteNoise.paused || 
         !foghorn.paused || !beeping.paused || !siren.paused || !bells.paused) {
         fallingRain.pause();
-        forestMorning.pause();
-        burningLogs.pause();
-        whiteNoise.pause();
-        foghorn.pause();
-        beeping.pause();
-        siren.pause();
-        bells.pause();
-        console.log ("paused");
-      }
+      forestMorning.pause();
+      burningLogs.pause();
+      whiteNoise.pause();
+      foghorn.pause();
+      beeping.pause();
+      siren.pause();
+      bells.pause();
+      console.log ("paused");
+    }
 	  // Save the soundscape or alarm selection
 	  if(num >= 1 && num <= 4){
       localStorage.setItem("soundscape", num);
@@ -349,10 +346,16 @@ $(function(){
 $('.scape').click( function() {
   $('.scape').removeClass( "active" );
   $( this ).addClass( "active" );
+  if (($('.scape').hasClass('active')) && ($('.alarm').hasClass('active'))) {
+    $('.float').removeClass('disabled');
+  }
 });
 
 $('.alarm').click( function() {
   $('.alarm').removeClass( "active" );
   $( this ).addClass( "active" );
+  if (($('.scape').hasClass('active')) && ($('.alarm').hasClass('active'))) {
+    $('.float').removeClass('disabled');
+  }
 });
 
