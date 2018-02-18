@@ -136,8 +136,9 @@ li {
 
 footer {
   text-align: center;
-  background-color: lightgray;
+  background-color: white;
   color: white;
   padding: 20px;
   margin-top: 2%;
+  margin-bottom: 0;
 }
