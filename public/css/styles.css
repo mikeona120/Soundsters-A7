@@ -10,6 +10,17 @@ h4 {
   color: black;
 }
 
+ul {
+
+    text-align: center;
+}
+
+li {
+    float: left;
+    padding-left: 12%;
+    display: inline-block;
+}
+
 .float{
   position:fixed;
   padding-top: 1%;
