@@ -69,6 +69,13 @@ function updateTimeRange(val) {
   document.getElementById("downtime").innerHTML = val;
   sessionStorage.setItem("downtimeVal", val);
   sessionStorage.setItem("downtimeValSecs", "00");
+}
+
+// links downtime slider to downtime timer
+function updateAlertTime(val) {
+  document.getElementById("alerttime").innerHTML = val;
+  sessionStorage.setItem("alerttimeVal", val);
+  sessionStorage.setItem("alerttimeValSecs", "00");
   if (($('.scape').hasClass('active')) && ($('.alarm').hasClass('active'))) {
     $('.float').removeClass('disabled');
   }

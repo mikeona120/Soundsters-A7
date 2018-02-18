@@ -31,7 +31,7 @@
 			</div>
 
 
-			<h4 class="mt-5">Alert Sound</h4>
+			<h4 class="mt-5" data-toggle="tooltip" title="The sound that will play whenever you're off-task for too long">Alert Sound</h4>
 			<div class="soundscroll squares" id="scroll2">
 				{{#each alerts}} 
 				<button class="btn btn-outline-secondary alarm" onclick="soundEffect({{soundEffectnum}})" id="{{id}}">{{name}}</button>
@@ -39,17 +39,26 @@
 			</div>
 
 			<!-- add save button: on save, updateTimeRange() -->
-			<br><br>
+			<!-- <br><br>
 			<output id="downtime" for="downtimeRange">20</output>
 			<br><br>
 			<div class="slidecontainer">
 				<input type="range" min="1" max="40" value="20" class="slider" id="downtimeRange" oninput="downtime.value = downtimeRange.value">
+			</div> -->
+			<br><br>
+			<!-- Alert Period: change minimum to 30 seconds? Link to Alert Settings later-->
+			<h4 data-toggle="tooltip" title="The amount of time between each alert">Alert Period (CHANGE LATER): <span id="alerttime">3</span> minutes</h4>
+			<br>
+
+			<div class="slidecontainer">
+				<input type="range" min="1" max="5" value="3" class="slider" id="alertRange" oninput="updateAlertTime(this.value)">
 			</div>
 
 
-			<br><br><br>
-			<output id="volume" for="alertVolume">100</output>
 			<br><br>
+			<h4 data-toggle="tooltip" title="How loud the alert will sound">Alert Volume: <output id="volume" for="alertVolume">100</output></h4>
+			
+			<br>
 			<div class="slidecontainer">
 				<input type="range" min="1" max="100" value="100" class="slider" id="alertVolume" oninput="volume.value = alertVolume.value">
 			</div>

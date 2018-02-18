@@ -10,6 +10,10 @@ h4 {
   white-space: normal;
 }
 
+.btn-outline-secondary {
+  background-color: white;
+}
+
 .black {
   color: black;
 }
@@ -56,18 +60,12 @@ li {
   font-size: 130%;
 }
 
-#volume:before {
-  content: "Alert Volume: ";
-  font-weight: bold;
-  font-size: 100%;
-}
-
 .slider {
   -webkit-appearance: none;
   width: 50%;
   height: 15px;
   border-radius: 5px;   
-  background: #d3d3d3;
+  background: #eee;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -80,7 +78,7 @@ li {
   width: 25px;
   height: 25px;
   border-radius: 50%; 
-  background: #4CAF50;
+  background: #00BCD4;
   cursor: pointer;
 }
 
@@ -105,9 +103,7 @@ li {
   -webkit-overflow-scrolling: touch;
 }
 
-.btn-outline-secondary {
-  background-color: white;
-}
+
 
 @media screen and (max-width: 500px) {
  .soundscroll{ 
