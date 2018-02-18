@@ -40,16 +40,6 @@ li {
   background-color: #B2EBF2;
 }
 
-.flex-container {
-  display:flex;
-  align-items: center; /* Vertical center alignment */
-  justify-content: center; /* Horizontal center alignment */
-}
-
-.jumbotron {
-  padding: 2%;
-}
-
 .productivity {
   background-color: #B2EBF2; 
   float:left;
