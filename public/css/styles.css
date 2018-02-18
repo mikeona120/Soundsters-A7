@@ -32,6 +32,12 @@ li {
   width:50%;
   bottom:30px;
   right:25%;
+  background-color: #00BCD4;
+  color: #fff;
+}
+
+.float:hover .float:active {
+  background-color: #B2EBF2;
 }
 
 .flex-container {
@@ -45,7 +51,7 @@ li {
 }
 
 .productivity {
-  background-color: #B2DFDB; 
+  background-color: #B2EBF2; 
   float:left;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -125,6 +131,7 @@ li {
 
 .squares{
   width:100%;
+  padding: 2%;
 }
 
 .squares > button{
