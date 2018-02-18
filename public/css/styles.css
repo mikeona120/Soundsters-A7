@@ -40,7 +40,7 @@ li {
   color: #fff;
 }
 
-.float:hover .float:active {
+.float:hover, .float:active {
   background-color: #B2EBF2;
 }
 
