@@ -17,7 +17,8 @@ ul {
 
 li {
     float: left;
-    padding-left: 12%;
+    padding-right: 6%;
+    padding-left: 6%;
     display: inline-block;
 }
 
