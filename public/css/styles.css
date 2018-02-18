@@ -6,12 +6,15 @@ h4 {
   font-size: 140%;
 }
 
+.btn {
+  white-space: normal;
+}
+
 .black {
   color: black;
 }
 
 ul {
-
     text-align: center;
 }
 
@@ -55,7 +58,7 @@ li {
 }
 
 .offtask {
-  background-color: #d3d3d3; 
+  background-color: #eee; 
   float:right;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -104,7 +107,7 @@ li {
   left:0;
   max-height:auto;
   margin:0;
-  /*background: #d3d3d3;*/
+  background: #eee;
   overflow-y:hidden;
   overflow-x:hidden;
   white-space: nowrap;
@@ -122,11 +125,11 @@ li {
 }
 
 .squares{
-  width:70%;
+  width:100%;
 }
 
 .squares > button{
-  width:25%;
+  width:20%;
   height:100px;
   margin:10px;
 }
