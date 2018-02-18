@@ -15,14 +15,14 @@ h4 {
 }
 
 ul {
-    text-align: center;
+  text-align: center;
 }
 
 li {
-    float: left;
-    padding-right: 6%;
-    padding-left: 6%;
-    display: inline-block;
+  float: left;
+  padding-right: 6%;
+  padding-left: 6%;
+  display: inline-block;
 }
 
 .float{
