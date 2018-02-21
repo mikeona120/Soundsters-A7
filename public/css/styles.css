@@ -24,12 +24,7 @@ h4 {
   background-color: white;
 }
 
-.vertAlign {
-   padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.black {
+.black { /* change to "iconColor" later! */
   color: black;
 }
 
