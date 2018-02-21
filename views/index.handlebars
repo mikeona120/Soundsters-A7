@@ -43,13 +43,6 @@
 				</div>
 
 				<br>
-				<h4 class="downtime-text" data-toggle="tooltip" title="The amount of time you allow yourself for goofing off for this work session">Total Break Time: <span id="downtime">20</span> minutes</h4>
-				<br>
-
-				<div class="slidecontainer">
-					<input type="range" min="1" max="40" value="20" class="slider" id="downtimeRange" oninput="updateTimeRange(this.value)">
-				</div>
-				<br>
 
 				<!-- Alert Period: change minimum to 30 seconds? Link to Alert Settings later-->
 				<h4 data-toggle="tooltip" title="The amount of time between each alert">Alert Period (CHANGE LATER): <span id="alerttime">3</span> minutes</h4>
@@ -58,7 +51,7 @@
 				<!-- 	<div class="slidecontainer">
 						<input type="range" min="1" max="5" value="3" class="slider" id="alertRange" oninput="updateAlertTime(this.value)">
 					</div> -->
-
+					<!-- CONVERT TO JSON LATER-->
 					<div class="btn-group btn-group-toggle" data-toggle="buttons">
 						<label class="btn btn-secondary">
 							<input type="radio" name="options" id="option1" autocomplete="off" checked onchange="updateAlertTime(1)"> 1
@@ -76,7 +69,16 @@
 							<input type="radio" name="options" id="option5" autocomplete="off" onchange="updateAlertTime(5)"> 5
 						</label>
 					</div>
+					<br><br>
+					<h4 class="downtime-text" data-toggle="tooltip" title="The amount of time you allow yourself for goofing off for this work session">Total Break Time: <span id="downtime">20</span> minutes</h4>
 					<br>
+
+					<div class="slidecontainer">
+						<input type="range" min="1" max="40" value="20" class="slider" id="downtimeRange" oninput="updateTimeRange(this.value)">
+					</div>
+					<br>
+
+
 
 					<!-- Start working -->
 					<a href="screen2" class="btn btn-outline-primary float disabled" role="button" aria-pressed="true" aria-disabled="true" onclick="resetSlider(), resetPTimer()">Start Working!</a>

@@ -163,6 +163,9 @@ footer {
 }
 
 @media (max-width: 500px) {
+h4 {
+  font-size: 100%;
+}
 footer {
 padding: 8%;
 margin-top: 0%;
