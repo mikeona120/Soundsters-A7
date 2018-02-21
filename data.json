@@ -42,5 +42,12 @@
     "name": "Bells",
     "soundEffectnum": 8
   }
+],
+  "users": [
+  {
+    "name": "Test name",
+    "Soundscape": "Test Soundscape",
+    "Alert": "Test Alert"
+  }
 ]
 }

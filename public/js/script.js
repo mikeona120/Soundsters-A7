@@ -1,3 +1,4 @@
+
 function resetSlider() {
   var slider = document.getElementById('downtimeRange');
   if (slider != null) {
@@ -38,7 +39,8 @@ if(pTime != null){
 	startPTimer();
 }
 
-
+//resets productive time to 0
+// Used when user starts or ends a work session
 function resetPTimer() {
   sessionStorage.setItem("pTimeVal", 0);
   sessionStorage.setItem("pTimeValSecs", 0);
@@ -239,12 +241,11 @@ $(function () {
       console.log (alarmSound);
       soundEffect(alarmSound);
     }
-    function soundEffect(num)
-    {
+    function soundEffect(num) {
       // if audio is playing, pause it first
       if (!fallingRain.paused || !forestMorning.paused || !burningLogs.paused || !whiteNoise.paused || 
         !foghorn.paused || !beeping.paused || !siren.paused || !bells.paused) {
-        fallingRain.pause();
+      fallingRain.pause();
       forestMorning.pause();
       burningLogs.pause();
       whiteNoise.pause();
@@ -258,40 +259,32 @@ $(function () {
 	  if(num >= 1 && num <= 4){
       localStorage.setItem("soundscape", num);
     }
-    else{
+    else {
       localStorage.setItem("alarm", num);
     }
       //play the song is clicked
       if (num == 1) {
-        console.log("hi");
         fallingRain.play();
       }
       else if (num == 2) {
-        console.log("hi2");
         forestMorning.play();
       }
       else if (num == 3){
-        console.log("hi3");
         burningLogs.play();
       }
       else if(num == 4){
-        console.log("hi4");
         whiteNoise.play();
       }
       else if(num == 5){
-        console.log("hi4");
         foghorn.play();
       }
       else if(num == 6){
-        console.log("hi4");
         beeping.play();
       }
       else if(num == 7){
-        console.log("hi4");
         siren.play();
       }
       else if(num == 8){
-        console.log("hi4");
         bells.play();
       }
 
@@ -299,10 +292,14 @@ $(function () {
       //show which song is selected
       var div1 = document.getElementById("div1");
       if(div1 != null){
-        div1.innerHTML = "You selected "+num;
+        div1.innerHTML = "You selected " + num;
       }
     }
 
+function mute() { 
+  var scape = document.getElementByClassName("scape");
+    scape.volume = 0.0;
+}
 
 //Scrolling for Soundscape
 $(function(){
@@ -326,8 +323,6 @@ $(function(){
   $('#scroll1').mouseup(function(){
     isDown = false;
   });
-
-
 })
 
 //Scrolling for Alert sound
@@ -339,7 +334,6 @@ $(function(){
      $('#scroll2').scrollLeft($('#scroll2').scrollLeft() + (currentX - event.pageX));
      currentY = event.pageY;
      currentX = event.pageX;
-
    }
  });
   
@@ -354,7 +348,7 @@ $(function(){
   });
 })
 
-// show if buttons are selected
+// show if sound buttons are selected, deselects non-active buttons
 $('.scape').click( function() {
   $('.scape').removeClass( "active" );
   $( this ).addClass( "active" );
